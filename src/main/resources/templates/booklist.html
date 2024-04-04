@@ -17,7 +17,7 @@
             <th>Edit</th>
             <th>Delete</th>
         </tr>
-            <tr th:each = "books : ${book}" >
+            <tr th:each = "book : ${books}" >
                 <td th:text="${book.author}"></td>
                 <td th:text="${book.title}"></td>
                 <td th:text="${book.isbn}"></td>
