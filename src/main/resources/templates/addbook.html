@@ -26,11 +26,16 @@
             <input type="text" id="price" th:field="*{price}" class="form-control"/>
             
             <div style="clear: both; display: block; height: 10px;"></div>
-            <label for="categoryList">Category</label>
-            <select id="categoryList" th:field="*{category}" class="form-control">
-            <option th:each="category: ${category}" th:value="${category.categoryId}" th:text="${category.name}"></option>
-            </select>
+
             
+
+            <label for="catlist">Category</label>
+            <select id="catlist" th:field="*{category.categoryId}" class="form-control">
+            <option th:each="cat: ${categories}" th:value="${cat.categoryId}" th:text="${cat.name}"></option>
+            </select>
+
+
+
             <div style="clear: both; display: black; height: 10px;"></div>
             <input type="submit" class="btn btn-primary" value="Save">
 
